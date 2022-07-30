@@ -1,8 +1,13 @@
 import { Request, Response } from "express"
 
 class UsersController {
-  readAllUsers (request: Request, response: Response) {
-    return response.json([
+  createUser(req: Request, res: Response) {
+    const name = req.body.name
+    res.json({ message: `User ${name} created`})
+  }
+
+  readAllUsers (_req: Request, res: Response) {
+    return res.json([
       { name: 'Pedro' },
       { name: 'Thiago' },
       { name: 'João' },
