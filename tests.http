@@ -1,0 +1,5 @@
+### Expect { message: "Hello world" }
+GET http://localhost:3000 HTTP/1.1
+
+### Expect a JSON with all the users
+GET http://localhost:3000/users HTTP/1.1
