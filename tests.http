@@ -5,4 +5,13 @@ GET http://localhost:3000 HTTP/1.1
 POST http://localhost:3000/users HTTP/1.1
 Content-Type: application/json
 
-{ "name": "Nath" }
+{ "name": "Nath", "email": "nath@dio.com.br" }
+
+### Expect status 400 JSON and an error message
+POST http://localhost:3000/users HTTP/1.1
+Content-Type: application/json
+
+{ "name": "" }
+
+### Expect status 400 JSON and an error message
+GET http://localhost:3000/users HTTP/1.1
